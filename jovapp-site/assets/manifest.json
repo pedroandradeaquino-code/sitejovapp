@@ -1,0 +1,21 @@
+{
+  "name": "JovApp - Cursos e Vagas para Jovem Aprendiz",
+  "short_name": "JovApp",
+  "description": "A plataforma que conecta talento jovem a oportunidades reais, com concorrência leal e transparência total.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0E13",
+  "theme_color": "#7ED957",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "jovapp-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "business", "productivity"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}

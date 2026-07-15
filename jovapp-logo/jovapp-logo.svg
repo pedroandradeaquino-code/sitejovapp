@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" width="600" height="180">
+  <!-- Definições de filtros e estilos -->
+  <defs>
+    <!-- Sombra verde sutil ao redor da lupa -->
+    <filter id="green-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#7ED957" flood-opacity="0.35"/>
+    </filter>
+    <!-- Contorno preto discreto na lupa -->
+    <filter id="black-stroke" x="-20%" y="-20%" width="140%" height="140%">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="1.5" result="expanded"/>
+      <feFlood flood-color="#000000" flood-opacity="0.6" result="stroke"/>
+      <feComposite in="stroke" in2="expanded" operator="in" result="strokeMask"/>
+      <feComposite in="SourceGraphic" in2="strokeMask" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo branco (para exportação isolada) -->
+  <rect width="600" height="180" fill="#FFFFFF"/>
+
+  <!-- Grupo principal do logotipo -->
+  <g id="jovapp-logo" transform="translate(30, 20)">
+    <!-- Texto "JovApp" - fonte sans-serif extra-bold, cantos levemente arredondados -->
+    <!-- Usamos path para controlar peso e arredondamento exatos -->
+    
+    <!-- Letra J -->
+    <path d="M0,110 C0,130 15,145 35,145 L55,145 C70,145 80,135 80,120 L80,25 C80,12 72,4 58,4 L38,4 C25,4 15,12 15,25 L15,110 Z" 
+          fill="#000000"/>
+    
+    <!-- Letra v (minúscula) - conectada ao J -->
+    <path d="M95,75 L120,145 L145,75 L128,75 L112,118 L98,75 L85,75 L100,115 L95,128 L90,115 Z" 
+          fill="#000000" transform="translate(0,0)"/>
+    
+    <!-- Lupa substituindo o "O" - posicionada entre v e A -->
+    <g id="magnifier" filter="url(#green-glow)">
+      <!-- Aro da lupa (círculo espesso) -->
+      <circle cx="210" cy="80" r="32" fill="none" stroke="#7ED957" stroke-width="10" stroke-linecap="round"/>
+      <!-- Contorno preto discreto no aro -->
+      <circle cx="210" cy="80" r="32" fill="none" stroke="#000000" stroke-width="1.2" stroke-opacity="0.5"/>
+      
+      <!-- Cabo da lupa (inclinado ~45° para baixo à esquerda) -->
+      <path d="M235,105 L275,150" stroke="#7ED957" stroke-width="10" stroke-linecap="round"/>
+      <path d="M235,105 L275,150" stroke="#000000" stroke-width="1.2" stroke-opacity="0.5"/>
+      
+      <!-- Reflexo sutil no vidro (opcional, para profundidade flat) -->
+      <path d="M185,55 Q210,70 235,55" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Capelo (chapéu de formatura) preto sobre a lupa, ligeiramente inclinado à direita -->
+    <g id="mortarboard" transform="translate(178, 20) rotate(8)">
+      <!-- Base quadrada do capelo -->
+      <path d="M0,0 L55,0 L58,6 L-3,6 Z" fill="#000000"/>
+      <!-- Topo do capelo (aba) -->
+      <path d="M-5,6 L60,6 L50,22 L0,22 Z" fill="#000000"/>
+      <!-- Borla (detalhe opcional, minimalista) -->
+      <circle cx="27.5" cy="22" r="2.5" fill="#7ED957"/>
+      <rect x="26.5" y="22" width="2" height="12" fill="#7ED957"/>
+    </g>
+    
+    <!-- Letra A (maiúscula) -->
+    <path d="M290,145 L325,15 C330,5 340,5 345,15 L380,145 L362,145 L338,55 L314,145 L290,145 Z M314,145 L314,75 L350,75 L350,145 Z" 
+          fill="#000000"/>
+    
+    <!-- Letra p (minúscula) - primeira -->
+    <path d="M410,75 L410,145 L435,145 C455,145 470,130 470,110 C470,90 455,75 435,75 L410,75 Z M435,75 L435,110 C435,122 422,132 410,132 C398,132 385,122 385,110 L385,75 L410,75 Z" 
+          fill="#000000"/>
+    
+    <!-- Letra p (minúscula) - segunda -->
+    <path d="M495,75 L495,145 L520,145 C540,145 555,130 555,110 C555,90 540,75 520,75 L495,75 Z M520,75 L520,110 C520,122 507,132 495,132 C483,132 470,122 470,110 L470,75 L495,75 Z" 
+          fill="#000000"/>
+  </g>
+</svg>

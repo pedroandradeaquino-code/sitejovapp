@@ -1,0 +1,114 @@
+/* ========================================
+   JOVAPP — DESIGN TOKENS
+   Tokens de design extraídos do logotipo
+   ======================================== */
+
+:root {
+  /* --- Cores da marca --- */
+  --jovapp-green: #7ED957;           /* Verde-limão principal (lupa) */
+  --jovapp-green-dim: rgba(126, 217, 87, 0.15);
+  --jovapp-green-glow: rgba(126, 217, 87, 0.35);
+  --jovapp-black: #000000;            /* Preto sólido (tipografia, capelo) */
+  --jovapp-black-soft: rgba(0, 0, 0, 0.6);
+  --jovapp-white: #FFFFFF;            /* Fundo branco */
+  --jovapp-gray-900: #1A202C;
+  --jovapp-gray-700: #4A5568;         /* Razão social / texto secundário */
+  --jovapp-gray-500: #718096;
+  --jovapp-gray-300: #E2E8F0;
+  --jovapp-gray-100: #F7FAFC;
+
+  /* --- Tipografia --- */
+  --jovapp-font-display: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --jovapp-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --jovapp-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Pesos usados no logo: extra-bold (800) para wordmark, 500 para razão social */
+  --jovapp-weight-logo: 800;
+  --jovapp-weight-heading: 700;
+  --jovapp-weight-body: 400;
+  --jovapp-weight-medium: 500;
+  --jovapp-weight-semibold: 600;
+
+  /* --- Espaçamento (base 4px) --- */
+  --jovapp-space-1: 4px;
+  --jovapp-space-2: 8px;
+  --jovapp-space-3: 12px;
+  --jovapp-space-4: 16px;
+  --jovapp-space-5: 20px;
+  --jovapp-space-6: 24px;
+  --jovapp-space-8: 32px;
+  --jovapp-space-10: 40px;
+  --jovapp-space-12: 48px;
+  --jovapp-space-16: 64px;
+
+  /* --- Border Radius (cantos levemente arredondados do logo) --- */
+  --jovapp-radius-sm: 6px;
+  --jovapp-radius-md: 10px;
+  --jovapp-radius-lg: 16px;           /* Próximo ao arredondamento das letras */
+  --jovapp-radius-xl: 24px;           /* App icon / botões grandes */
+  --jovapp-radius-full: 9999px;
+
+  --- Sombras --- */
+  --jovapp-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --jovapp-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --jovapp-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --jovapp-shadow-green: 0 0 16px var(--jovapp-green-glow);  /* Glow da lupa */
+
+  /* --- Transições --- */
+  --jovapp-transition-fast: 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --jovapp-transition-base: 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --jovapp-transition-slow: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* --- Z-index --- */
+  --jovapp-z-dropdown: 100;
+  --jovapp-z-sticky: 200;
+  --jovapp-z-modal: 300;
+  --jovapp-z-toast: 400;
+  --jovapp-z-tooltip: 500;
+
+  /* --- Breakpoints --- */
+  --jovapp-bp-sm: 640px;
+  --jovapp-bp-md: 768px;
+  --jovapp-bp-lg: 1024px;
+  --jovapp-bp-xl: 1280px;
+  --jovapp-bp-2xl: 1536px;
+}
+
+/* ========================================
+   UTILITÁRIOS DE LOGO (para uso no HTML)
+   ======================================== */
+
+.jovapp-logo {
+  display: inline-block;
+  width: auto;
+  height: 48px; /* altura padrão */
+}
+
+.jovapp-logo--sm { height: 32px; }
+.jovapp-logo--lg { height: 64px; }
+.jovapp-logo--xl { height: 96px; }
+
+.jovapp-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.jovapp-icon--sm { width: 24px; height: 24px; }
+.jovapp-icon--md { width: 36px; height: 36px; }
+.jovapp-icon--lg { width: 64px; height: 64px; }
+
+/* Animação sutil de entrada do logo (opcional) */
+@keyframes jovapp-logo-reveal {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.jovapp-logo-animate {
+  animation: jovapp-logo-reveal 0.6s var(--jovapp-transition-slow) forwards;
+}
+
+/* Respeita prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .jovapp-logo-animate { animation: none; opacity: 1; transform: none; }
+}

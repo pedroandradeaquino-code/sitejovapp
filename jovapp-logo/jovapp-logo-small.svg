@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="green-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#7ED957" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="200" height="200" fill="#FFFFFF"/>
+  <g transform="translate(100, 100) scale(0.65)">
+    <!-- J -->
+    <path d="M0,110 C0,130 15,145 35,145 L55,145 C70,145 80,135 80,120 L80,25 C80,12 72,4 58,4 L38,4 C25,4 15,12 15,25 L15,110 Z" fill="#000000"/>
+    <!-- v -->
+    <path d="M95,75 L120,145 L145,75 L128,75 L112,118 L98,75 L85,75 L100,115 L95,128 L90,115 Z" fill="#000000"/>
+    <!-- Lupa -->
+    <g filter="url(#green-glow)">
+      <circle cx="210" cy="80" r="32" fill="none" stroke="#7ED957" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="210" cy="80" r="32" fill="none" stroke="#000000" stroke-width="1.2" stroke-opacity="0.5"/>
+      <path d="M235,105 L275,150" stroke="#7ED957" stroke-width="10" stroke-linecap="round"/>
+      <path d="M235,105 L275,150" stroke="#000000" stroke-width="1.2" stroke-opacity="0.5"/>
+    </g>
+    <!-- Capelo -->
+    <g transform="translate(178, 20) rotate(8)">
+      <path d="M0,0 L55,0 L58,6 L-3,6 Z" fill="#000000"/>
+      <path d="M-5,6 L60,6 L50,22 L0,22 Z" fill="#000000"/>
+      <circle cx="27.5" cy="22" r="2.5" fill="#7ED957"/>
+      <rect x="26.5" y="22" width="2" height="12" fill="#7ED957"/>
+    </g>
+    <!-- A -->
+    <path d="M290,145 L325,15 C330,5 340,5 345,15 L380,145 L362,145 L338,55 L314,145 L290,145 Z M314,145 L314,75 L350,75 L350,145 Z" fill="#000000"/>
+    <!-- p -->
+    <path d="M410,75 L410,145 L435,145 C455,145 470,130 470,110 C470,90 455,75 435,75 L410,75 Z M435,75 L435,110 C435,122 422,132 410,132 C398,132 385,122 385,110 L385,75 L410,75 Z" fill="#000000"/>
+    <!-- p -->
+    <path d="M495,75 L495,145 L520,145 C540,145 555,130 555,110 C555,90 540,75 520,75 L495,75 Z M520,75 L520,110 C520,122 507,132 495,132 C483,132 470,122 470,110 L470,75 L495,75 Z" fill="#000000"/>
+  </g>
+</svg>
